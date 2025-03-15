@@ -1,0 +1,89 @@
+---
+import projects from "../../data/projects.json";
+import Layout from "../../layouts/Layout.astro";
+import {Picture} from 'astro:assets';
+
+// Define the dynamic route
+export function getStaticPaths() {
+    // Return all project slugs so Astro can generate the pages for each one
+    return projects.map(project => ({
+        params: { slug: project.slug }
+    }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find(p => p.slug === slug);
+
+if (!project) throw new Error("Project not found");
+
+const { title, image, details, tech } = project;
+---
+
+<Layout title={title}>
+    <section class="py-12 px-6 text-white bg-gray-900 min-h-screen">
+        <div class="max-w-3xl mx-auto">
+            <Picture
+                    src={image} alt={title}
+                    width="600" height="400"
+                    formats={['avif', 'webp']}
+                    loading="eager"
+                    class="w-full rounded-lg shadow-md mb-6" />
+            <h1 class="text-4xl font-bold">{title}</h1>
+            <p class="mt-2 mb-6">{details.projectType} | {details.duration}</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+                <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
+                    <h2 class="text-md font-semibold">Languages</h2>
+                    <div class="flex flex-wrap gap-2 justify-center mt-3">
+                        {project.tech.languages.map((l) => (
+                                <span class="text-blue-300 rounded text-xs">{l}</span>
+                        ))}
+                    </div>
+                </div>
+                <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
+                    <h2 class="text-md font-semibold">Frameworks</h2>
+                    <div class="flex flex-wrap gap-2 justify-center mt-3">
+                        {project.tech.frameworks.map((f) => (
+                                <span class="text-blue-300 rounded text-xs">{f}</span>
+                        ))}
+                    </div>
+                </div>
+                <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
+                    <h2 class="text-md font-semibold">Tools</h2>
+                    <div class="flex flex-wrap gap-2 justify-center mt-3">
+                        {project.tech.tools.map((t) => (
+                                <span class="text-blue-300 rounded text-xs">{t}</span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-400 mt-6">{details.overview}</p>
+
+            <h2 class="text-2xl font-semibold mt-6">Problem Statement</h2>
+            <p class="text-gray-400 mt-2">{details.problem}</p>
+
+            <h2 class="text-2xl font-semibold mt-6">Task</h2>
+            <p class="text-gray-400 mt-2">{details.task}</p>
+
+            <h2 class="text-2xl font-semibold mt-6">Solutions</h2>
+            <ul class="list-disc list-inside text-gray-300">
+                {details.solutions.map(solution => (
+                        <li class="text-gray-400">{solution}</li>
+                ))}
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-6">Features</h2>
+            <ul class="list-disc list-inside text-gray-300">
+                {details.features.map(feature => (
+                        <li class="text-gray-400">{feature}</li>
+                ))}
+            </ul>
+
+            <div class="mt-6 flex gap-4">
+                <a href={details.github} class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600">GitHub</a>
+                <a href={details.live_demo} class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">Live Demo</a>
+            </div>
+        </div>
+    </section>
+</Layout>
