@@ -1,3 +1,27 @@
 ---
-
+const socialLinks = [
+    { name: "GitHub", url: "https://github.com/kavicastelo", icon: "github" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/kavi-castelo/", icon: "linkedin" },
+    { name: "Twitter", url: "https://x.com/kavicastelo", icon: "twitter" },
+    { name: "Facebook", url: "https://facebook.com/kavi.castelo/", icon: "facebook" }
+];
 ---
+
+<section class="text-center py-16 bg-gray-900 text-white" id="contact">
+    <h2 class="text-3xl font-bold">Let’s Connect & Build the Future</h2>
+    <p class="mt-2 text-gray-400">Have an idea or just want to chat? Reach out and let's make something great!</p>
+
+    <div class="mt-6">
+        <a href="mailto:kavindu@talentboozt.com" class="text-lg text-blue-400 hover:underline">
+            kavindu@talentboozt
+        </a>
+    </div>
+
+    <div class="flex justify-center gap-6 mt-6">
+        {socialLinks.map((link) => (
+                <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label="{link.name}" class="text-gray-400 hover:text-white">
+                    <i class={`fab fa-${link.icon} text-2xl`}></i>
+                </a>
+        ))}
+    </div>
+</section>

@@ -1,7 +1,7 @@
 ---
 import projects from "../../data/projects.json";
 import Layout from "../../layouts/Layout.astro";
-import {Picture} from 'astro:assets';
+import { Picture } from 'astro:assets';
 
 // Define the dynamic route
 export function getStaticPaths() {
@@ -17,10 +17,19 @@ const project = projects.find(p => p.slug === slug);
 if (!project) throw new Error("Project not found");
 
 const { title, image, details, tech } = project;
+const hasGitHub = details.github && details.github.trim() !== '';
+const hasNote = details.note && details.note.trim() !== '';
 ---
 
 <Layout title={title}>
-    <section class="py-12 px-6 text-white bg-gray-900 min-h-screen">
+    <!-- Notification Element -->
+    {hasNote && (
+            <div class="fixed top-0 left-0 right-0 bg-blue-600 text-white text-center py-2 z-50">
+                <p class="text-sm">{details.note}</p>
+            </div>
+    )}
+
+    <section class="py-12 px-6 text-white bg-gray-900 min-h-screen mt-16">
         <div class="max-w-3xl mx-auto">
             <Picture
                     src={image} alt={title}
@@ -35,7 +44,7 @@ const { title, image, details, tech } = project;
                 <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
                     <h2 class="text-md font-semibold">Languages</h2>
                     <div class="flex flex-wrap gap-2 justify-center mt-3">
-                        {project.tech.languages.map((l) => (
+                        {tech.languages.map((l) => (
                                 <span class="text-blue-300 rounded text-xs">{l}</span>
                         ))}
                     </div>
@@ -43,7 +52,7 @@ const { title, image, details, tech } = project;
                 <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
                     <h2 class="text-md font-semibold">Frameworks</h2>
                     <div class="flex flex-wrap gap-2 justify-center mt-3">
-                        {project.tech.frameworks.map((f) => (
+                        {tech.frameworks.map((f) => (
                                 <span class="text-blue-300 rounded text-xs">{f}</span>
                         ))}
                     </div>
@@ -51,7 +60,7 @@ const { title, image, details, tech } = project;
                 <div class="block max-w-sm p-4 border rounded-lg shadow-sm bg-gray-800 border-gray-700 hover:bg-gray-700">
                     <h2 class="text-md font-semibold">Tools</h2>
                     <div class="flex flex-wrap gap-2 justify-center mt-3">
-                        {project.tech.tools.map((t) => (
+                        {tech.tools.map((t) => (
                                 <span class="text-blue-300 rounded text-xs">{t}</span>
                         ))}
                     </div>
@@ -81,7 +90,10 @@ const { title, image, details, tech } = project;
             </ul>
 
             <div class="mt-6 flex gap-4">
-                <a href={details.github} class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600">GitHub</a>
+                <!-- Conditionally render GitHub button -->
+                {hasGitHub && (
+                        <a href={details.github} class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600">GitHub</a>
+                )}
                 <a href={details.live_demo} class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">Live Demo</a>
             </div>
         </div>

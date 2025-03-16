@@ -1,41 +1,5 @@
 [
   {
-    "title": "Ethical AI driven Geographic Analytics Platform",
-    "slug": "urbanair",
-    "description": "An AI-powered air quality monitoring and prediction system with learning and ethical considerations.",
-    "tech": {
-      "languages": ["Typescript", "Java", "Python", "HTML", "SCSS", "noSQL"],
-      "frameworks": ["Angular", "Express", "Springboot", "Bootstrap", "Materials"],
-      "tools": ["MongoDB", "JWT", "MailSender", "Py4j", "Docker", "Render", "Netlify"]
-    },
-    "image": "/projects/background.svg",
-    "link": "https://urban-air-quality-monitor.netlify.app/",
-    "details": {
-      "overview": "This project aims to develop a Geographic Analytics Platform driven by Ethical AI to meet the growing demand for environmentally focused data analysis. With increasing concerns about the environment and the merging of data analytics, there is a need for a platform that combines these elements to facilitate well-informed decision-making. This platform will enable users to analyze geographic data while adhering to ethical standards.",
-      "problem": "Current environmental data analysis often lacks ethical considerations and a centralized platform, leading to fragmented and unreliable data. This makes it challenging to make informed decisions regarding air quality, land use, and meteorological conditions. The absence of a unified, ethical solution hinders the ability to address environmental issues effectively.",
-      "task": "The primary task is to design and develop a modern, user-friendly Geographic Analytics Platform that integrates AI and data analytics to provide insights into air quality, land use, and meteorological conditions. The platform must incorporate ethical standards throughout the data processing lifecycle and support real-time data integration, predictive modeling, and cross-domain collaboration.",
-      "solutions": [
-        "Ethical Framework: Develop and implement a framework to integrate ethical considerations into all stages of data processing.",
-        "Predictive Modeling: Utilize effective predictive modeling techniques to ensure accurate and reliable projections.",
-        "User-Friendly Design: Create intuitive and accessible interfaces for users with varying levels of expertise.",
-        "Centralized Data Processing: Establish robust strategies for consistent and reliable data processing.",
-        "Real-Time Data Integration: Integrate real-time data sources to enhance responsiveness to environmental changes.",
-        "Cross-Domain Collaboration: Facilitate collaboration across different domains to support holistic decision-making.",
-        "Data Privacy and Security: Implement stringent measures to protect sensitive information and comply with data protection regulations."
-      ],
-      "features": [
-        "Real-time air quality monitoring",
-        "AI-driven prediction models",
-        "Historical data analysis",
-        "Interactive dashboards"
-      ],
-      "projectType": "Web Application",
-      "duration": "Dec 2023 - April 2024",
-      "github": "https://github.com/kavicastelo/Ethical-AI-driven-Geographic-Analytics-Platform.git",
-      "live_demo": "https://urban-air-quality-monitor.netlify.app/"
-    }
-  },
-  {
     "title": "Talentboozt Job Portal",
     "slug": "talentboozt",
     "description": "A SaaS-based job portal designed to simplify the recruitment process. It offers a comprehensive platform for employers and job seekers, similar to LinkedIn but without a social feed.",
@@ -67,7 +31,8 @@
       ],
       "projectType": "Web Application (SaaS)",
       "duration": "July 2024 - Present",
-      "github": "https://github.com/your-repo/talentboozt",
+      "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
+      "github": "",
       "live_demo": "https://talentboozt.com/"
     }
   },
@@ -104,8 +69,45 @@
       ],
       "projectType": "Web Application (SaaS)",
       "duration": "July 2024 - Present",
-      "github": "https://github.com/your-repo/talentboozt-recruiter",
-      "live_demo": "https://talentboozt.com/recruiter"
+      "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
+      "github": "",
+      "live_demo": "https://talentboozt.com"
+    }
+  },
+  {
+    "title": "Ethical AI driven Geographic Analytics Platform",
+    "slug": "urbanair",
+    "description": "An AI-powered air quality monitoring and prediction system with learning and ethical considerations.",
+    "tech": {
+      "languages": ["Typescript", "Java", "Python", "HTML", "SCSS", "noSQL"],
+      "frameworks": ["Angular", "Express", "Springboot", "Bootstrap", "Materials"],
+      "tools": ["MongoDB", "JWT", "MailSender", "Py4j", "Docker", "Render", "Netlify"]
+    },
+    "image": "/projects/background.svg",
+    "link": "https://urban-air-quality-monitor.netlify.app/",
+    "details": {
+      "overview": "This project aims to develop a Geographic Analytics Platform driven by Ethical AI to meet the growing demand for environmentally focused data analysis. With increasing concerns about the environment and the merging of data analytics, there is a need for a platform that combines these elements to facilitate well-informed decision-making. This platform will enable users to analyze geographic data while adhering to ethical standards.",
+      "problem": "Current environmental data analysis often lacks ethical considerations and a centralized platform, leading to fragmented and unreliable data. This makes it challenging to make informed decisions regarding air quality, land use, and meteorological conditions. The absence of a unified, ethical solution hinders the ability to address environmental issues effectively.",
+      "task": "The primary task is to design and develop a modern, user-friendly Geographic Analytics Platform that integrates AI and data analytics to provide insights into air quality, land use, and meteorological conditions. The platform must incorporate ethical standards throughout the data processing lifecycle and support real-time data integration, predictive modeling, and cross-domain collaboration.",
+      "solutions": [
+        "Ethical Framework: Develop and implement a framework to integrate ethical considerations into all stages of data processing.",
+        "Predictive Modeling: Utilize effective predictive modeling techniques to ensure accurate and reliable projections.",
+        "User-Friendly Design: Create intuitive and accessible interfaces for users with varying levels of expertise.",
+        "Centralized Data Processing: Establish robust strategies for consistent and reliable data processing.",
+        "Real-Time Data Integration: Integrate real-time data sources to enhance responsiveness to environmental changes.",
+        "Cross-Domain Collaboration: Facilitate collaboration across different domains to support holistic decision-making.",
+        "Data Privacy and Security: Implement stringent measures to protect sensitive information and comply with data protection regulations."
+      ],
+      "features": [
+        "Real-time air quality monitoring",
+        "AI-driven prediction models",
+        "Historical data analysis",
+        "Interactive dashboards"
+      ],
+      "projectType": "Web Application",
+      "duration": "Dec 2023 - April 2024",
+      "github": "https://github.com/kavicastelo/Ethical-AI-driven-Geographic-Analytics-Platform.git",
+      "live_demo": "https://urban-air-quality-monitor.netlify.app/"
     }
   },
   {
@@ -140,7 +142,8 @@
       ],
       "projectType": "Web Application (SaaS)",
       "duration": "Ongoing",
-      "github": "https://github.com/your-repo/talentboozt-resume-builder",
+      "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
+      "github": "",
       "live_demo": "https://cv.talentboozt.com"
     }
   },
@@ -176,7 +179,8 @@
       ],
       "projectType": "Web Application (SaaS)",
       "duration": "March 2025 - Present",
-      "github": "https://github.com/your-repo/talentboozt-trainee",
+      "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
+      "github": "",
       "live_demo": "https://courses.talentboozt.com"
     }
   },
@@ -212,7 +216,8 @@
       ],
       "projectType": "Web Application (SaaS)",
       "duration": "March 2025 - Present",
-      "github": "https://github.com/your-repo/talentboozt-trainer",
+      "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
+      "github": "",
       "live_demo": "https://trainer.talentboozt.com"
     }
   }
