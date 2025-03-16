@@ -16,16 +16,21 @@ const project = projects.find(p => p.slug === slug);
 
 if (!project) throw new Error("Project not found");
 
-const { title, image, details, tech } = project;
+const { title, image, details, tech, description, keywords } = project;
 const hasGitHub = details.github && details.github.trim() !== '';
 const hasNote = details.note && details.note.trim() !== '';
 ---
 
-<Layout title={title}>
+<Layout seo={
+    {
+        title:title,
+        description:description,
+    }
+} author="Kavi Castelo" keywords={keywords.join(', ')}>
     <!-- Notification Element -->
     {hasNote && (
-            <div class="fixed top-0 left-0 right-0 bg-blue-600 text-white text-center py-2 z-50">
-                <p class="text-sm">{details.note}</p>
+            <div class="fixed top-0 left-0 right-0 bg-blue-600 text-white text-sm text-center py-2 z-50">
+                {details.note}
             </div>
     )}
 
@@ -98,4 +103,32 @@ const hasNote = details.note && details.note.trim() !== '';
             </div>
         </div>
     </section>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "{title}",
+            "image": "{image}",
+            "description": "{description}",
+            "author": {
+                "@type": "Person",
+                "name": "Kavi Castelo",
+                "url": "https://kavicastelo-dev.netlify.app/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Talentboozt"
+            },
+            "applicationCategory": "WebApplication",
+            "operatingSystem": "All",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "url": "https://kavicastelo-dev.netlify.app/projects/{slug}"
+        }
+    </script>
+
 </Layout>

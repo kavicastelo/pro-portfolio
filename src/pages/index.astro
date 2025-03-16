@@ -5,6 +5,9 @@ import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Blog from "../components/Blog.astro";
 import Contact from "../components/Contact.astro";
+import Faq from "../components/Faq.astro";
+
+import faqs from "../data/faqs.json";
 ---
 
 <Layout>
@@ -12,6 +15,7 @@ import Contact from "../components/Contact.astro";
 	<About />
 	<Projects />
 	<Blog />
+	<Faq faqs={faqs} />
 	<Contact />
 </Layout>
 

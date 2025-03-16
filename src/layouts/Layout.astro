@@ -2,22 +2,57 @@
 import './src/styles/global.css'
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { title } = Astro.props;
+import {SEO, type Props as SEOProps} from "astro-seo";
+
+interface Props {
+    seo?: SEOProps;
+    keywords?: string;
+    author?: string;
+}
+
+const {seo, keywords, author} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-		<title>{title || 'Kavi Castelo | Portfolio'}</title>
-	</head>
-	<body class="bg-gray-900">
-	<Header/>
-		<slot />
-	<Footer/>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.5, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="keywords" content={keywords ?? "Kavi Castelo, portfolio, developer, web developer, web developer portfolio, portfolio website, developer portfolio, developer portfolio website"}>
+    <meta name="author" content={author ?? "Kavi Castelo"}>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <SEO
+        {...seo}
+        title={seo?.title ?? "Kavi Castelo | Portfolio"}
+        description={seo?.description ?? "Kavi Castelo's professional portfolio showcasing top projects and experience."}
+        twitter={{
+            creator: '@kavicastelo',
+            site: '@kavicastelo',
+            card: 'summary_large_image',
+        }}
+        openGraph={{
+            basic: {
+                title: seo?.title ?? "Kavi Castelo | Portfolio",
+                type: 'website',
+                image: '/og.svg',
+            },
+        }}
+    />
+</head>
+<body class="bg-gray-900">
+<Header/>
+<slot/>
+<Footer/>
+</body>
 </html>

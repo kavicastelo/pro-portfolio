@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Leetcode",
+    "icon": "/social-icons/leetcode.png",
+    "url": "https://leetcode.com/u/kavicastelo/"
+  },
+  {
+    "name": "GeeksForGeeks",
+    "icon": "/social-icons/gfg.svg",
+    "url": "https://www.geeksforgeeks.org/user/kavicastelo/"
+  },
+  {
+    "name": "Stackoverflow",
+    "icon": "/social-icons/stackoverflow.svg",
+    "url": "https://stackoverflow.com/users/20531015/kavi-castelo"
+  },
+  {
+    "name": "Gitlab",
+    "icon": "/social-icons/gitlab.svg",
+    "url": "https://gitlab.com/kavicastelo"
+  },
+  {
+    "name": "Codersrank",
+    "icon": "/social-icons/codersrank.svg",
+    "url": "https://profile.codersrank.io/user/kavicastelo"
+  },
+  {
+    "name": "Codeium",
+    "icon": "/social-icons/codeium.svg",
+    "url": "https://codeium.com/profile/kavicastelo"
+  },
+  {
+    "name": "Codolio",
+    "icon": "/social-icons/codolio.svg",
+    "url": "https://codolio.com/profile/kavicastelo"
+  },
+  {
+    "name": "Daily Dev",
+    "icon": "/social-icons/dailydev.png",
+    "url": "https://app.daily.dev/kavi_castelo"
+  },
+  {
+    "name": "Google developer",
+    "icon": "/social-icons/gdev.svg",
+    "url": "https://g.dev/kavindu_kokila?utm_source=developers.google.com&utm_medium=referral"
+  },
+  {
+    "name": "Digital Garden",
+    "icon": "/social-icons/digital-garden.svg",
+    "url": "https://kavicastelo.netlify.app/#/home"
+  }
+]
