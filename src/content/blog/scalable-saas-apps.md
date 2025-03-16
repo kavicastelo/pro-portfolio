@@ -2,7 +2,7 @@
 title: "Lessons from Building Scalable SaaS Apps"
 description: "Key takeaways from developing enterprise-grade SaaS applications, covering architecture, performance, security, and scalability."
 date: 2025-03-15
-tags: [ "SaaS", "Scalability", "Cloud", "Performance" ]
+tags: [ "What is SaaS Apps", "Scalability Architecture", "Use Cloud Platforms", "Performance Optimization for SaaS", "Security Practices for SaaS", "Agile Development for SaaS", "Data-Driven Decision-Making", "Customer Support & Reliability" ]
 author: "Kavi Castelo"
 draft: false
 ---

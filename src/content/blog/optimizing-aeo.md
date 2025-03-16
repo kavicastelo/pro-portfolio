@@ -2,7 +2,7 @@
 title: "Optimizing AEO: How I Built an AI-Readable Portfolio"
 description: "Discover how I optimized my portfolio for AI-Enabled Optimization (AEO) to improve visibility on search engines and answer engines. Learn about structuring content, performance tuning, and AI-friendly formatting."
 date: 2025-03-15
-tags: [ "AEO", "SEO", "Portfolio Optimization", "AI Readability", "Web Performance" ]
+tags: [ "AEO", "SEO", "Website Optimization", "How to Optimize for AI Readability", "Improve Visibility on Search Engines", "Web Performance Tuning", "Ask Engine Optimization", "Tricking AI to Read Your Content", "Portfolio Optimization", "AI-Friendly Formatting" ]
 author: "Kavi Castelo"
 draft: false
 ---
