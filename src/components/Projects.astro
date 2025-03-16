@@ -3,7 +3,7 @@ import projects from "../data/projects.json";
 import {Picture} from 'astro:assets';
 ---
 
-<section class="py-12 bg-gray-900 text-white text-center">
+<section class="py-12 bg-gray-900 text-white text-center" id="projects">
     <h2 class="text-3xl font-bold mb-6">Featured Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
         {projects.map((project) => (
