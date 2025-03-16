@@ -34,7 +34,8 @@
       "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
       "github": "",
       "live_demo": "https://talentboozt.com/"
-    }
+    },
+    "keywords": ["job portal project", "project use cases", "job portal planing", "job portal solution", "job portal features", "developer notes", "project ideas for developers", "job portal demo", "problem solving", "real world problem solving articles"]
   },
   {
     "title": "Talentboozt Job Recruiter",
@@ -72,7 +73,8 @@
       "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
       "github": "",
       "live_demo": "https://talentboozt.com"
-    }
+    },
+    "keywords": ["recruiter project", "project use cases", "recruiter app planing", "job recruitment solution", "recruiter tools features", "developer notes", "project ideas for developers", "recruiter app demo", "problem solving", "real world problem solving articles"]
   },
   {
     "title": "Ethical AI driven Geographic Analytics Platform",
@@ -108,7 +110,8 @@
       "duration": "Dec 2023 - April 2024",
       "github": "https://github.com/kavicastelo/Ethical-AI-driven-Geographic-Analytics-Platform.git",
       "live_demo": "https://urban-air-quality-monitor.netlify.app/"
-    }
+    },
+    "keywords": ["ethical ai project", "project use cases", "monitoring platform planing", "ethical ai solution", "ethical ai features", "developer notes", "project ideas for developers", "ethical ai demo", "problem solving", "real world problem solving articles", "air quality monitoring platform", "geographic analytics platform"]
   },
   {
     "title": "Talentboozt Resume Builder",
@@ -145,7 +148,8 @@
       "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
       "github": "",
       "live_demo": "https://cv.talentboozt.com"
-    }
+    },
+    "keywords": ["resume builder project", "project use cases", "resume builder planing", "resume builder solution", "resume builder features", "developer notes", "project ideas for developers", "resume builder demo", "problem solving", "real world problem solving articles"]
   },
   {
     "title": "Talentboozt Trainee Platform",
@@ -182,7 +186,8 @@
       "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
       "github": "",
       "live_demo": "https://courses.talentboozt.com"
-    }
+    },
+    "keywords": ["job hunter project", "project use cases", "job hunter project planing", "job hunters solutions", "job hunter app features", "developer notes", "project ideas for developers", "job hunter demo", "problem solving", "real world problem solving articles"]
   },
   {
     "title": "Talentboozt Trainer Platform",
@@ -219,6 +224,7 @@
       "note": "\uD83D\uDEA8 Due to privacy and security considerations, the source code for this project is not publicly available. However, you can explore the live demo!",
       "github": "",
       "live_demo": "https://trainer.talentboozt.com"
-    }
+    },
+    "keywords": ["trainer project", "project use cases", "trainer project planing", "trainer solutions", "trainer app features", "developer notes", "project ideas for developers", "trainer demo", "problem solving", "real world problem solving articles", "courses providing platform", "educational resources platform", "learning management system"]
   }
 ]

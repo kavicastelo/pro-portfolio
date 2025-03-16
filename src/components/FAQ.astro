@@ -1,0 +1,57 @@
+---
+import MarkdownIt from 'markdown-it';
+
+interface FAQ {
+    question: string;
+    answer: string;
+}
+
+const { faqs } = Astro.props;
+
+const md = new MarkdownIt('commonmark', { html: true });
+
+// Convert each FAQ answer to Markdown-rendered HTML
+const faqsWithHtml = faqs.map(faq => ({
+    question: faq.question,
+    answer: md.render(faq.answer)
+}));
+---
+
+<section class="max-w-3xl mx-auto my-12 p-6 bg-gray-900 text-white rounded-lg shadow-lg" id="faq">
+    <h2 class="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+
+    <div class="space-y-4" x-data="{ openFaq: null }">
+        {faqsWithHtml.map((faq, index) => (
+                <div class="border border-gray-700 rounded-lg">
+                    <button
+                            class="w-full text-left p-4 bg-gray-800 hover:bg-gray-700 flex justify-between items-center"
+                            @click="openFaq === index ? openFaq = null : openFaq = index"
+                    >
+                        <span>{faq.question}</span>
+                        <i class="fa" :class="openFaq === index ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div class="p-4 bg-gray-700 text-gray-300" x-show="openFaq === index" x-transition>
+                        <div class="prose prose-invert" set:html={faq.answer}></div>
+                    </div>
+                </div>
+        ))}
+    </div>
+</section>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {faqs.map(faq => `{
+                "@type": "Question",
+                "name": "${faq.question}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "${faq.answer}"
+                }
+            }`).join(",")}
+        ]
+    }
+</script>

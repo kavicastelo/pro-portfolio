@@ -2,7 +2,7 @@
 title: "Why Astro is a Game-Changer for Fast Websites"
 description: "Astro is revolutionizing web performance with its island architecture. Learn why it's the best choice for modern, high-speed websites."
 date: 2025-03-14
-tags: [ "astro", "portfolio", "blog" ]
+tags: [ "Astro Game Changer", "Improve Web Performance", "Web Development with Astro", "Performance Optimization", "Serverless Deployment", "Static Site Generation", "High-Speed Websites", "Best Web Framework in 2025", "Web Performance Optimization", "Astro Framework" ]
 author: "Kavi Castelo"
 draft: false
 ---
