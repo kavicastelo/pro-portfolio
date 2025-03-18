@@ -39,19 +39,23 @@ const faqsWithHtml = faqs.map(faq => ({
 </section>
 
 <!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-    {
+<script>
+    const faqData = faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }));
+
+    const jsonData = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [
-            {faqs.map(faq => `{
-                "@type": "Question",
-                "name": "${faq.question}",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "${faq.answer}"
-                }
-            }`).join(",")}
-        ]
-    }
+        "mainEntity": faqData
+    });
+
+    document.getElementById('json-data').textContent = jsonData;
 </script>
+
+<script type="application/ld+json" id="json-data"></script>
